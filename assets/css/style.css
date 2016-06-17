@@ -1,0 +1,18 @@
+
+@import "http://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+
+h1 {
+  font-family: Rancho;
+  font-size: 100px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+body{
+	background-color: #7f0000;
+}
+
+div.background {
+  background: url(stars-and-stripes.jpeg) repeat;
+  border: 2px solid black;
+}
