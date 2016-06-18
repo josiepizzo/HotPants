@@ -10,9 +10,29 @@ h1 {
 
 body{
 	background-color: #7f0000;
+	padding-bottom: 70px;
 }
 
 div.background {
   background: url(stars-and-stripes.jpeg) repeat;
   border: 2px solid black;
 }
+
+.navbar-fixed-bottom{
+  background-image: url("stars1.jpeg");
+  background-repeat: repeat-x;
+}
+
+#topNav{
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.topNavLi{
+	color: #7f0000;
+	font-weight: bold;
+}
+
+
+
+
