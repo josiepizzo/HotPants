@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <div class="modal fade" tabindex="-1" role="dialog" id="instrutionModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -65,8 +66,25 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                
                                 <label for="text">Issue</label>
-                                <input type="text" class="form-control" id="" placeholder="Issue">
+                                <select id="issue" class="form-control">
+                                    <option value="blank"></option>
+                                    <option value="campaign-finance">Campaign Finance</option>
+                                    <option value="climate-change">Climate Change</option>
+                                    <option value="police-reform">Criminal Justice Reform</option>
+                                    <option value="education">Education</option>
+                                    <option value="foreign-aid">Foreign Aid</option>
+                                    <option value="transgender">Gender Identity</option>
+                                    <option value="gun">Gun Control</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="immigration">Immigration</option>
+                                    <option value="marijuana">Marijuana</option>                                                    
+                                    <option value="muslim">Muslim Immigrants</option>
+                                    <option value="terrorism">Terrorism</option>
+                                    <option value="welfare">Welfare Reform</option>
+                                </select>
+                    </div>
                             </div>
                             <button type="submit" class="btn btn-danger">Submit</button>
                         </div>
@@ -89,6 +107,8 @@
     <script src="assets/js/general.js"></script>
     <!-- linking JS -->
     <script src='assets/js/modal.js'></script>
+    <script src='assets/js/hotpants.js'></script>
+
 </body>
 
 </html>
