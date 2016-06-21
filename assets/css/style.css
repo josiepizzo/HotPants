@@ -30,3 +30,14 @@ div.background {
     color: #7f0000;
     font-weight: bold;
 }
+
+#issuePull{
+  margin-left: 100px;
+}
+
+.form-control{
+  width:350px !important;
+}
+
+
+
