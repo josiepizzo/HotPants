@@ -2,7 +2,7 @@ function guardian(){
 
 		var politician = $('#politician option:selected').val();
 		var issue = $('#issue option:selected').val();
-    var queryURL = "http://content.guardianapis.com/search?section=us-news&q=" + politician + "%20AND%20" + issue + "&limit=3&api-key=2483b33c-e60d-4d3c-930f-d26c87e3c6aa";
+    var queryURL = "http://content.guardianapis.com/search?section=us-news&q=" + politician + "%20AND%20" + issue + "&page-size=3&api-key=2483b33c-e60d-4d3c-930f-d26c87e3c6aa";
 
 	$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 			console.log(queryURL);
