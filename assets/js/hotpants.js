@@ -28,17 +28,17 @@ function guardian(){
 
 $( document ).ready(function() {
 
-//Get politcian and subject from dropdown for Guardian API
-	$('#submit').on('click', function(){
+// //Get politcian and subject from dropdown for Guardian API
+// 	$('#submit').on('click', function(){
 		
-		var politician = $('#politician option:selected').val();
-		var issue = $('#issue option:selected').val();
-	console.log(politician);
-	console.log(issue);
-		guardian();
-		return false;
+// 		var politician = $('#politician option:selected').val();
+// 		var issue = $('#issue option:selected').val();
+// 	console.log(politician);
+// 	console.log(issue);
+// 		guardian();
+// 		return false;
 
 
-	});
+// 	});
 
 });
