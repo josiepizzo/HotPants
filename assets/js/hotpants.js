@@ -6,7 +6,7 @@ function guardian(){
 	//Get politician and subject from dropdown for Guardian API
 		var politician = $('#politician option:selected').val();
 		var issue = $('#issue option:selected').val();
-    var queryURL = "http://content.guardianapis.com/search?section=us-news&q=" + politician + "%20AND%20" + issue + "&page-size=3&api-key=2483b33c-e60d-4d3c-930f-d26c87e3c6aa";
+    var queryURL = "https://content.guardianapis.com/search?section=us-news&q=" + politician + "%20AND%20" + issue + "&page-size=3&api-key=2483b33c-e60d-4d3c-930f-d26c87e3c6aa";
 
     //Call the Guardian API
 	$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
@@ -53,7 +53,7 @@ function giphy() {
 
 		$('#giphyDisplay').empty();
 		var politician = $('#politician option:selected').val();
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + politician + "&limit=1&api_key=dc6zaTOxFJmzC";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + politician + "&limit=1&api_key=dc6zaTOxFJmzC";
 		
 		// Creates AJAX call for the button that was clicked
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
