@@ -12,7 +12,7 @@ body {
 }
 
 div.background {
-    background: url(stars-and-stripes.jpeg) repeat;
+    background: url(../images/stars-and-stripes2.jpg) repeat;
     border: 2px solid black;
 }
 
