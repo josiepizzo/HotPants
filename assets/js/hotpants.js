@@ -44,10 +44,7 @@ function politifact(){
 		$("#politifactDisplay").append("<div class='col-md-12 panel panel-default pull-left'> <div class='panel-body'><div class='col-md-4'><img src='" + response.objects[i].speaker.photo + "' alt=" + politician + " width='80' height='80'> </div><div class='col-md-4'> <a href='" + response.objects[i].canonical_url + "'>"+ response.objects[i].statement + "</a><br> -- "+ response.objects[i].speaker.first_name + " " + response.objects[i].speaker.last_name + "</div><div class='col-md-4 pull-right'><img src='" + response.objects[i].ruling.ruling_graphic + "' alt=" + response.objects[i].ruling.ruling + " width='80' height='80'> </div></div></div>");
    }
 
-	// Alternate Format 
-	for (var i = 0; i < 3; i++) { 
-		$("#politifactDisplay").append("<div class='col-md-12 panel panel-default pull-left'> <div class='panel-body'><ul class='media-list'><li class='media'><div class='media-left'><a href='" + response.objects[i].canonical_url + "'><img class='media-object' src='" + response.objects[i].speaker.photo + "' alt=" + politician + " width='80' height='80'><img class='media-object' src='" + response.objects[i].ruling.ruling_graphic + "' alt=" + response.objects[i].ruling.ruling + " width='80' height='80'></div><div class='media-body'><h4 class='media-heading'>"  + response.objects[i].statement + "</h4> -- " + response.objects[i].speaker.first_name + " " + response.objects[i].speaker.last_name + " </a></div>  </li></ul>");
-	}
+	
 
 	});
 }
