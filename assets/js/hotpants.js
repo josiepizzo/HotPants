@@ -53,19 +53,20 @@ function giphy() {
 
 		$('#giphyDisplay').empty();
 		var politician = $('#politician option:selected').val();
-		console.log(politician);
+		
+		//modify value for Bernie Sanders
 		if (politician === "bernie-s") {
 
 				var politician = "bernie-sanders"
 
 			} 
-			console.log(politician);
+		
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + politician + "&limit=1&api_key=dc6zaTOxFJmzC";
 		
 		// Creates AJAX call for the button that was clicked
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 			console.log(response);
-			//modify value for Bernie Sanders
+			
 
 			
 
