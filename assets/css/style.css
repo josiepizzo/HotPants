@@ -17,7 +17,7 @@ div.background {
 }
 
 .navbar-fixed-bottom {
-    background-image: url(stars1.jpeg);
+    background-image: url(../images/stars1.jpeg);
     background-repeat: repeat-x;
 }
 
