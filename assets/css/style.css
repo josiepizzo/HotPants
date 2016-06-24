@@ -31,20 +31,27 @@ div.background {
     font-weight: bold;
 }
 
-#issuePull{
-  margin-left: 100px;
+#issuePull {
+    margin-left: 100px;
 }
 
-.form-control{
-  width:350px !important;
+.form-control {
+    width: 350px !important;
 }
-
 
 .hide {
     display: none;
 }
 
-.show{
-    display:    block;
+.show {
+    display: block;
 }
 
+#gifDisplay {
+    display: block;
+    margin: 0 auto;
+}
+
+#guardianDisplay {
+    text-align: center;
+}
