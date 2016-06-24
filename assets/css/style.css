@@ -40,4 +40,11 @@ div.background {
 }
 
 
+.hide {
+    display: none;
+}
+
+.show{
+    display:    block;
+}
 

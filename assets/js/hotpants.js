@@ -95,7 +95,11 @@ function giphy() {
 
 $( document ).ready(function() {
 
+//Get politcian and subject from dropdown for Guardian API
+	$('#submit').on('click', function(){
 
+		$("#displayResults").addClass("show");
+		
 		var politician = $('#politician option:selected').val();
 		var issue = $('#issue option:selected').val();
 		console.log(politician);
