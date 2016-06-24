@@ -42,7 +42,7 @@ $(document).ready(function() {
 //Get politcian and subject from dropdown for Guardian API
 	$('#submit').on('click', function(){
 		console.log('in submit');
-
+		 $("#displayResults").addClass("show");
 		var politician = $('#politician option:selected').val().trim();
 		var issue = $('#issue option:selected').val().trim();
 		console.log(politician);
