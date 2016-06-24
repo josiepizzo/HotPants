@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+
+    <head> 
     <title>Political Hotpants</title>
 </head>
 
@@ -41,7 +45,11 @@
             <a class="modal-trigger topNavLi" href="#modal1">Instructions</a>
         </li>
         <li role="presentation"><a class="topNavLi" href="#">API Links</a></li>
-        <li role="presentation"><a class="topNavLi" href="#">Previous Searches</a></li>
+        <li role="presentation"><a id="prevSearch" class="topNavLi" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Previous Searches<span class="caret"></span></a>
+            <ul id="searchDropdown" class="dropdown-menu">
+                
+            </ul>
+        </li>
     </ul>
     <div class="container">
         <div class="row">
@@ -127,7 +135,12 @@
         <img src="assets/images/stars1.jpeg">
     </nav>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- Firebase Reference -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <script src="assets/js/general.js"></script>
     <!-- linking JS -->
     <!-- <script src='assets/js/modal.js'></script> -->

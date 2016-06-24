@@ -8,6 +8,9 @@ function guardian(){
 		var issue = $('#issue option:selected').val();
     var queryURL = "https://content.guardianapis.com/search?section=us-news&q=" + politician + "%20AND%20" + issue + "&page-size=3&api-key=2483b33c-e60d-4d3c-930f-d26c87e3c6aa";
 
+
+    console.log('guardian', politician);
+    console.log('issue', issue);
     //Call the Guardian API
 	$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 			// console.log(queryURL);
@@ -29,8 +32,13 @@ function politifact(){
 	$("#politifactDisplay").html("");
 	
 	//Get politician and subject from dropdown for Politifact API
+
+
 		var politician = $('#politician option:selected').val();
 		var issue = $('#issue option:selected').val();
+
+		console.log('politifact politician', politician);
+		console.log('politificat issue', issue);
     var queryURL = "https://crossorigin.me/http://www.politifact.com/api/v/2/statement/?speaker__name_slug=" + politician + "&subject__subject_slug=" + issue +"&ordering=-ruling_date&limit=3&format=json";
     
 
@@ -94,14 +102,11 @@ $( document ).ready(function() {
 		
 		var politician = $('#politician option:selected').val();
 		var issue = $('#issue option:selected').val();
-	console.log(politician);
-	console.log(issue);
+		console.log(politician);
+		console.log(issue);
 		guardian();
 		politifact();
 		giphy();
 		return false;
-
-
-	});
 
 });
