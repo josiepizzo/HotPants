@@ -1,4 +1,4 @@
-@import "http://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
 h1 {
     font-family: Rancho;
     font-size: 100px;
@@ -12,12 +12,12 @@ body {
 }
 
 div.background {
-    background: url(stars-and-stripes.jpeg) repeat;
+    background: url(../images/stars-and-stripes2.jpg) repeat;
     border: 2px solid black;
 }
 
 .navbar-fixed-bottom {
-    background-image: url(stars1.jpeg);
+    background-image: url(../images/stars1.jpeg);
     background-repeat: repeat-x;
 }
 

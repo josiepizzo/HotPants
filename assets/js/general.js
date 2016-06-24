@@ -1,10 +1,18 @@
 //Comment
 $(document).ready(function() {
 
-	var politician = "";
-	var prevPolitician = "";
+	var session = localStorage.getItem('session');
+	if (!session) {
+		localStorage.setItem('session', JSON.stringify([]));		
+	} else {
+		var previousHistory = JSON.parse(session);
+		
+		for (var i = 0; i < previousHistory.length; i++) {
+			addToPreviousHistory(previousHistory[i].politician, previousHistory[i].issue);
+		}
+	}
 
-    console.log("ready!");
+
 
 	$('.modal-trigger').on('click', function() {
         $('#instrutionModal').modal();
@@ -15,60 +23,68 @@ $(document).ready(function() {
 	var hotPantsData = new Firebase("https://hotpants.firebaseio.com/");
 
 
+	function SaveDataToLocalStorage(data)
+	{
+	    var a = [];
+	    a = JSON.parse(localStorage.getItem('session'));
+	    a.push(data);
+	    localStorage.setItem('session', JSON.stringify(a));
+	}
+
+	//call add toprevious history and passin the politicanandtheissue
+	function addToPreviousHistory(politician, issue) {
+		var row = $("<li class='previous-history-search'><a href='#'>" + politician + ' - ' + issue + "</a></li>");
+		row.attr('data-politician', politician);
+		row.attr('data-issue', issue);
+		$("#searchDropdown").append(row);		
+	}
+
 //Get politcian and subject from dropdown for Guardian API
 	$('#submit').on('click', function(){
-		
-		politician = $('#politician option:selected').val().trim();
+		console.log('in submit');
+
+		var politician = $('#politician option:selected').val().trim();
 		var issue = $('#issue option:selected').val().trim();
 		console.log(politician);
 		console.log(issue);
 		guardian();
+		politifact();
+		giphy();
+
+		addToPreviousHistory(politician,issue);
+
+		// Creates local "temporary" object for holding employee data
+		var newSearch = {
+			politician:politician,
+			issue:issue
+		};
+
+		// Uploads employee data to the database
+		hotPantsData.push(newSearch);
+		SaveDataToLocalStorage(newSearch);
+
+
 		return false;
 	});
 
-// 2. Button for previous searches
-$("#prevSearch").on("click", function(){
-	console.log("politician is ", politician);
-	prevPolitician = politician;
-	console.log(prevPolitician);
-	// Grabs user input
-		politician = $('#politician option:selected').val();
-		console.log(politician);
-		var issue = $('#issue option:selected').val();
 
-		// Creates local "temporary" object for holding employee data
-	var newSearch = {
-		politician:politician,
-		issue:issue
-	}
+$( document ).on( "click", ".previous-history-search", function() {
+	console.log('clicked on previous search');
+  var politician = $(this).attr('data-politician');
+  var issue = $(this).attr('data-issue');
 
-	// Uploads employee data to the database
-	hotPantsData.push(newSearch);
+  console.log(politician);
+  console.log(issue);
 
-	// Add each train's data into the table
-// 	$("#employeeTable > tbody").append("<tr><td>" + empName + "</td><td>" + empRole + "</td><td>" + empStartPretty + "</td><td>" + empMonths + "</td><td>" + empRate + "</td><td>" + empBilled + "</td></tr>");
+	$('#politician').val(politician);
+	$('#issue').val(issue);
 
-// 	var tableRow = $("<tr>");
-// 	var tableData1 = $("<td>");
-// 	tableData1.html(empName);
-// 	var tableData2 = $("<td>");
-// 	tableData2.html(empRole);
-// 	var tableData3 = $("<td>");
-// 	var tableData4 = $("<td>");
-// 	tableRow.append(tableData1);
-// 	tableRow.append(tableData2);
-// 	tableRow.append(tableData3);
-// 	tableRow.append(tableData4);
-// 	$("#employeeTable > tbody").append(tableRow);
-//<li><a href="#">Action</a></li>
-// });
-	
-	$("#searchDropdown").append("<li><a href='#'>" + prevPolitician + "</a></li>")
+	guardian();
+	politifact();
+	giphy();
 
 
-		// Logs everything to console
-		console.log(politician);
-	console.log(newSearch.politician);
-	console.log(issue.issue);
 
 });
+
+
