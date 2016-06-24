@@ -72,7 +72,7 @@ $( document ).on( "click", ".previous-history-search", function() {
 	console.log('clicked on previous search');
   var politician = $(this).attr('data-politician');
   var issue = $(this).attr('data-issue');
-
+  $("#displayResults").addClass("show");
   console.log(politician);
   console.log(issue);
 
