@@ -22,11 +22,11 @@
                 </div>
                 <div class="modal-body">
                     <p>There are people whose political beliefs fall on both the left and right sides of the political spectrum. This site is a source for political information designed to help our visitors formulate their own ideas and opinions by using the information found on the news sites provided.</p>
-										<p>The API links are a collection of links to our sources.</p>
-										<p>Previous Searches will display the users search history.</p>
-										<p>On this site you can choose your favorite politician from the drop-down then choose an issue from the second drop-down then submit will generate articles from PolitiFact and The Guardian. GIPHY will also display GIFs of the politician you have searched.</p>
-										<p>This site is a great source for those who want to cut through all the double speak and misinformation and get right to the facts.</p> 
-										<p>So lets get started.</p>
+				    <p>The API links are a collection of links to our sources.</p>
+					<p>Previous Searches will display the users search history.</p>
+					<p>On this site you can choose your favorite politician from the drop-down then choose an issue from the second drop-down then submit will generate articles from PolitiFact and The Guardian. GIPHY will also display GIFs of the politician you have searched.</p>
+					<p>This site is a great source for those who want to cut through all the double speak and misinformation and get right to the facts.</p> 
+					<p>So lets get started.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -44,7 +44,19 @@
         <li role="presentation">
             <a class="modal-trigger topNavLi" href="#modal1">Instructions</a>
         </li>
-        <li role="presentation"><a class="topNavLi" href="#">API Links</a></li>
+        <li role="presentation">
+        <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Links<span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="http://www.politifact.com/" target="_blank">Politifact</a></li>
+            <li><a href="http://www.theguardian.com/us" target="_blank">The Guardian</a></li>
+            <li><a href="http://www.giphy.com/" target="_blank">Giphy</a></li>
+          </ul>
+</div>
+
+        </li>
+
         <li role="presentation"><a id="prevSearch" class="topNavLi" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Previous Searches<span class="caret"></span></a>
             <ul id="searchDropdown" class="dropdown-menu">
                 

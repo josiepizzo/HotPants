@@ -47,4 +47,15 @@ div.background {
 .show{
     display:    block;
 }
-
+.btn-default{
+    color: #7f0000 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+    margin-top: 3px;
+    font-weight: bold;
+}
+.btn-default:hover{
+    background-color: #eee !important;
+    border-color: #fff !important;
+    color: #23527c !important
+}

@@ -12,13 +12,11 @@ $(document).ready(function() {
 		}
 	}
 
-
-
 	$('.modal-trigger').on('click', function() {
         $('#instrutionModal').modal();
     });
 });
-// ========================================== START CODING BELOW!!
+
 	// **** Created Reference to Firebase Database
 	var hotPantsData = new Firebase("https://hotpants.firebaseio.com/");
 
